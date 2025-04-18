@@ -25,6 +25,32 @@ document.addEventListener('DOMContentLoaded', function() {
         showSlide(newIndex);
     });
     
+// Бургер-меню
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+
+menuToggle.addEventListener('click', function() {
+    this.classList.toggle('active');
+    menu.classList.toggle('active');
+    
+    // Блокировка скролла при открытом меню
+    if (menu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = '';
+    }
+});
+
+// Закрытие меню при клике на ссылку
+const navLinks = document.querySelectorAll('.menu a');
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        menuToggle.classList.remove('active');
+        menu.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+});
+
     // Автоматическое переключение слайдов
     setInterval(() => {
         nextBtn.click();
