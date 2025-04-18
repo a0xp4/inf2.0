@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Изучаем ИИ - для детей</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="bounce">Искусственный Интеллект для Детей</h1>
+            <p>Увлекательное путешествие в мир умных машин!</p>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#what-is-ai">Что такое ИИ?</a></li>
+                <li><a href="#how-it-works">Как работает?</a></li>
+                <li><a href="#examples">Примеры</a></li>
+                <li><a href="#try-it">Попробуй сам</a></li>
+                <li><a href="#contact">Записаться</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="what-is-ai" class="scroll-section">
+        <div class="container">
+            <h2>Что такое Искусственный Интеллект?</h2>
+            <div class="presentation">
+                <div class="slide active">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1998/1998664.png" alt="Робот" class="slide-img">
+                    <p>ИИ - это когда компьютеры могут думать и учиться почти как люди!</p>
+                </div>
+                <div class="slide">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2103/2103633.png" alt="Мозг" class="slide-img">
+                    <p>Он помогает решать сложные задачи быстрее человека.</p>
+                </div>
+                <div class="slide">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2933/2933245.png" alt="Робот и ребенок" class="slide-img">
+                    <p>ИИ уже вокруг нас: в телефонах, играх и даже в мультиках!</p>
+                </div>
+                <div class="slide-nav">
+                    <button class="prev-btn"><i class="fas fa-arrow-left"></i></button>
+                    <span class="slide-indicator">1/3</span>
+                    <button class="next-btn"><i class="fas fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="scroll-section">
+        <div class="container">
+            <h2>Как работает ИИ?</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <button class="accordion-btn">Обучение на примерах <i class="fas fa-plus"></i></button>
+                    <div class="accordion-content">
+                        <p>ИИ учится так же, как ты: смотрит на много примеров и запоминает закономерности. Например, чтобы научиться распознавать кошек, он посмотрит тысячи картинок с кошками!</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn">Нейронные сети <i class="fas fa-plus"></i></button>
+                    <div class="accordion-content">
+                        <p>Это как маленькие мозговые клеточки в компьютере, которые работают вместе, чтобы решать задачи. Чем их больше, тем умнее ИИ!</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-btn">Принятие решений <i class="fas fa-plus"></i></button>
+                    <div class="accordion-content">
+                        <p>ИИ взвешивает все "за" и "против", как ты, когда выбираешь мороженое. Только делает это очень-очень быстро!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="examples" class="scroll-section">
+        <div class="container">
+            <h2>Где мы встречаем ИИ?</h2>
+            <div class="examples-grid">
+                <div class="example-card">
+                    <div class="card-front">
+                        <i class="fas fa-robot"></i>
+                        <h3>Голосовые помощники</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Алиса, Сири и другие понимают твой голос благодаря ИИ!</p>
+                    </div>
+                </div>
+                <div class="example-card">
+                    <div class="card-front">
+                        <i class="fas fa-gamepad"></i>
+                        <h3>Умные игры</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Персонажи в играх учатся и подстраиваются под тебя!</p>
+                    </div>
+                </div>
+                <div class="example-card">
+                    <div class="card-front">
+                        <i class="fas fa-car"></i>
+                        <h3>Беспилотные авто</h3>
+                    </div>
+                    <div class="card-back">
+                        <p>Машины сами видят дорогу и решают, куда ехать!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="try-it" class="scroll-section">
+        <div class="container">
+            <h2>Попробуй ИИ сам!</h2>
+            <div class="demo-box">
+                <p>Нарисуй цифру от 0 до 9, а ИИ попробует угадать:</p>
+                <canvas id="drawing-board" width="200" height="200"></canvas>
+                <div class="demo-controls">
+                    <button id="clear-btn">Очистить</button>
+                    <button id="guess-btn">Угадать!</button>
+                </div>
+                <div id="guess-result" class="hidden">
+                    <h3>Я думаю, это цифра: <span id="ai-guess">?</span></h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="scroll-section">
+        <div class="container">
+            <h2>Запишись на наши уроки по ИИ!</h2>
+            <form id="signup-form">
+                <div class="form-group">
+                    <label for="name">Твое имя:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон родителя:</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Твой возраст:</label>
+                    <select id="age" required>
+                        <option value="">Выбери</option>
+                        <option value="6-7">6-7 лет</option>
+                        <option value="8-9">8-9 лет</option>
+                        <option value="10-11">10-11 лет</option>
+                    </select>
+                </div>
+                <button type="submit">Отправить</button>
+            </form>
+            <div id="form-success" class="hidden">
+                <h3>Спасибо! Мы скоро свяжемся с тобой!</h3>
+                <p>А пока можешь продолжить изучение ИИ на нашем сайте.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Кузнецов А.А.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-vk"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
